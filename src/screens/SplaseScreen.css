@@ -36,7 +36,6 @@
   .logo {
     width: 150px;
     height: auto;
-    animation: fadeIn 1.5s ease-in-out;
   }
 
 .footer-text {
@@ -47,12 +46,12 @@
     color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
-    animation-delay: 1s;
+    animation: fadeIn 0s ease-in-out forwards;
+    animation-delay: 0s;
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.0s ease-in-out;
   }
   
   .footer-text:hover {

@@ -6,6 +6,7 @@ body {
   align-items: center;
   height: 100vh;
   background: url('../Image/bgimg.png') no-repeat center center/cover;
+  font-family: "Helvetica";
 }
 
 .signin-container {
@@ -23,7 +24,6 @@ body {
   right: 30px;
   color: white;
   font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
@@ -38,29 +38,55 @@ body {
   padding: 20px;
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  text-align: center;
+  text-align: left;
   width: 400px;
 }
 
-.logo {
-  font-size: 24px;
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.welcome-heading {
+  font-size: 32px;
   color: white;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
+  font-family: "Helvetica";
+  text-align: left;
+  width: 100%;
+}
+
+.welcome-subheading {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  font-family: "Helvetica";
+  line-height: 1.5;
+  max-width: 400px;
+  text-align: left;
+  width: 100%;
 }
 
 h2 {
   color: white;
+  text-align: center;
+  
 }
 
 .input-field {
   width: 90%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px auto;
   border: none;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.2);
   color: white;
+  display: block;
 }
 
 .input-field::placeholder {
@@ -75,19 +101,29 @@ h2 {
 }
 
 .terms {
-  font-size: 11px;
+  font-size: 10px;
   color: white;
-  margin-bottom: 20px;
+  margin: 15px 0;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .terms a {
-  color: white;
+  color: yellow;
   text-decoration: underline;
+  display: inline-block;
 }
 
 .error-message {
-  color: red;
-  margin: 10px 0;
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: left;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: rgba(255, 68, 68, 0.1);
+  border-radius: 4px;
+  display: block;
 }
 
 .login-button {
@@ -99,6 +135,8 @@ h2 {
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
 
 .or-divider {

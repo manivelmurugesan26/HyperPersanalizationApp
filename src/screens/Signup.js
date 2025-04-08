@@ -53,28 +53,18 @@ const Signup = () => {
       toast.success("Signup Successful!", {
         position: isMobile ? "bottom-center" : "top-right",
         autoClose: 2000,
-        hideProgressBar: true,
+        hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        style: {
-          background: "#2A2A2A",
-          color: "#FFFFFF",
-          borderRadius: "25px",
-          padding: "12px 24px",
-          fontSize: "16px",
-          textAlign: "center",
-          width: "auto",
-          minWidth: "200px",
-          maxWidth: "90%",
-          margin: "0 auto 20px auto",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
-        },
-        icon: false
+        progress: undefined,
+        theme: "light"
       });
       setTimeout(() => {
         navigate("/explore");
       }, 2000);
+    } else {
+      setError(error);
     }
   };
   
@@ -88,7 +78,8 @@ const Signup = () => {
 
       <div className="signin-card">
         <div className="logo-container">
-          <img src={logo} alt="Areta360 Logo" className="logo" />
+          <h1 className="welcome-heading">Welcome to Areta360</h1>
+          <p className="welcome-subheading">Create an Account and unlock your personalised shopping experience</p>
         </div>
 
         <h2>Sign Up</h2>
@@ -132,7 +123,7 @@ const Signup = () => {
         {error && <p className="error-message">{error}</p>}
 
         <p className="terms">
-          By continuing, I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        By Continuing, I agree to the <a href="#">Terms of services</a> and <a href="#">acknowledge the conditions</a>
         </p>
 
         <button className="login-button" onClick={handleSignup}>

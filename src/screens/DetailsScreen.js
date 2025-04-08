@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaArrowLeft, FaArrowRight, FaHeart } from "react-icons/fa";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+import { FiHeart } from "react-icons/fi";
+import { BiHelpCircle } from "react-icons/bi";
 import { PiMagicWand } from "react-icons/pi";
 import "./DetailsScreen.css";
 import bodyImage from "../Image/body.png";
+import logo from "../Image/logo.png";
 
 const slides = [
   {
@@ -14,7 +17,7 @@ const slides = [
   },
   {
     id: 2,
-    title: "MenN's\nLarge sizes",
+    title: "Men's\nLarge sizes",
     europeSize: "44",
     international: "L",
   },
@@ -26,10 +29,10 @@ const slides = [
   },
 ];
 
-const Card = ({ slide, isActive, isLiked, onLike }) => (
-  <div className={`card ${isActive ? "active" : "inactive"}`}>
+const Card = ({ slide, isActive, isPrevious, isNext, isLiked, onLike }) => (
+  <div className={`card ${isActive ? "active" : ""} ${isPrevious ? "previous" : ""} ${isNext ? "next" : ""} ${!isActive && !isPrevious && !isNext ? "inactive" : ""}`}>
     <button className={`like-button ${isLiked ? "liked" : ""}`} onClick={onLike}>
-      <FaHeart />
+      <FiHeart />
     </button>
 
     <h2 className="title">
@@ -71,6 +74,14 @@ export default function DetailsScreen() {
     setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  const handleHelp = () => {
+    alert("Need help? Contact our support team!");
+  };
+
+  const handleLanguageChange = (e) => {
+    console.log("Language changed to:", e.target.value);
+  };
+
   const toggleLike = (slideId) => {
     setLikedSlides((prev) => {
       const newLiked = new Set(prev);
@@ -85,11 +96,20 @@ export default function DetailsScreen() {
 
   return (
     <div className="details-container">
-      <div className="header-bar">
-        <h2 className="header-title">Choose your body type</h2>
-        <button className="help-button" onClick={() => alert("Need Help?")}>
-          Need Help <PiMagicWand />
+      <div className="logo-wrapper">
+        <img src={logo} alt="Logo" className="logo-image" />
+      </div>
+
+      <div className="top-right-menu">
+        <button className="help-button" onClick={handleHelp}>
+          <BiHelpCircle /> Help
         </button>
+        <select className="language-select" onChange={handleLanguageChange} defaultValue="en">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+        </select>
       </div>
 
       <div className="card-stack">
@@ -98,22 +118,18 @@ export default function DetailsScreen() {
             key={slide.id}
             slide={slide}
             isActive={index === currentIndex}
+            isPrevious={index === (currentIndex - 1 + slides.length) % slides.length}
+            isNext={index === (currentIndex + 1) % slides.length}
             isLiked={likedSlides.has(slide.id)}
             onLike={() => toggleLike(slide.id)}
           />
         ))}
 
         <button className="arrow-btn left-arrow" onClick={handlePrevious}>
-          <FaArrowLeft className="arrow-icon" />
+          <IoIosArrowRoundBack className="arrow-icon" />
         </button>
         <button className="arrow-btn right-arrow" onClick={handleNext}>
-          <FaArrowRight className="arrow-icon" />
-        </button>
-      </div>
-
-      <div className="button-container">
-        <button className="explore-btn" onClick={() => navigate("/video")}>
-          Go to Explore
+          <IoIosArrowRoundForward className="arrow-icon" />
         </button>
       </div>
     </div>

@@ -44,28 +44,18 @@ const HomeScreen = () => {
       toast.success("Login Successful!", {
         position: isMobile ? "bottom-center" : "top-right",
         autoClose: 2000,
-        hideProgressBar: true,
+        hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        style: {
-          background: "#2A2A2A",
-          color: "#FFFFFF",
-          borderRadius: "25px",
-          padding: "12px 24px",
-          fontSize: "16px",
-          textAlign: "center",
-          width: "auto",
-          minWidth: "200px",
-          maxWidth: "90%",
-          margin: "0 auto 20px auto",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
-        },
-        icon: false
+        progress: undefined,
+        theme: "light"
       });
       setTimeout(() => {
         navigate("/explore");
       }, 2000);
+    } else {
+      setError(error);
     }
   };
 
@@ -136,4 +126,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default HomeScreen;     
