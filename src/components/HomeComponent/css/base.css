@@ -1,0 +1,134 @@
+/* Base styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: url('../../../assets/images/bgimg.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Helvetica";
+  color: white;
+}
+
+/* Common container styles */
+.base-container {
+  text-align: center;
+  width: 100vw; 
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+
+/* Common button styles */
+.help-button, .language-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(37px);
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.help-button:hover, .language-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: yellow;
+  color: yellow;
+}
+
+.help-button svg, .language-button svg {
+  font-size: 16px;
+}
+
+/* Common language select styles */
+.language-select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid white;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-select:hover {
+  border-color: yellow;
+  color: yellow;
+}
+
+.language-select option {
+  background: #1f1f1f;
+  color: white;
+}
+
+/* Common header styles */
+.base-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(127, 127, 127, 0.9);
+  padding: 12px 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.base-header-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Common back button styles */
+.back-button {
+  position: absolute;
+  top: 90px;
+  left: 30px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  z-index: 100;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+.back-icon {
+  font-size: 18px;
+  color: rgba(209, 209, 209, 1);
+}
+
+.back-text {
+  color: rgba(209, 209, 209, 1);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  margin-left: 4px;
+} 

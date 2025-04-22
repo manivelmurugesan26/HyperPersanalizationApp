@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "manivel",
+      "email": "manivelmurugesan26@gmail.com",
+      "password": "$2a$10$lSD0l/WcNY.v.l5QU0exVOpnJ3HHHoXXlpZBvThP9DlhOorukAvY.",
+      "createdAt": "2025-04-09T06:29:31.036Z"
+    },
+    {
+      "id": 2,
+      "username": "amit sahu",
+      "email": "amit@123M",
+      "password": "$2a$10$9Vu571Vyu9psdHnRkJtufO7obb/UKLL6NE42eOtHa9anQDbSQsqte",
+      "createdAt": "2025-04-09T06:31:17.467Z"
+    },
+    {
+      "id": 3,
+      "username": "poornima",
+      "email": "poorini@gmail.com",
+      "password": "$2a$10$he32gfx28ppAKclWWA70Fe8YCxzcSgnVBIZha2iizX.rUmURR1W1O",
+      "createdAt": "2025-04-09T06:38:03.518Z"
+    },
+    {
+      "id": 4,
+      "username": "diya",
+      "email": "diya@gmail.com",
+      "password": "$2a$10$SfcsFP22suky1CNmUv1VgOE7nr2VsJTv.jmyHn4WN9U3kBlKSy1EG",
+      "createdAt": "2025-04-09T07:34:32.485Z"
+    },
+    {
+      "id": 5,
+      "username": "sandeep",
+      "email": "sandeep@gmail.com",
+      "password": "$2a$10$kI1usOe5DvsLnJVIIdPM9etQOfS3zBgPlkV37eu.8PoLC.9wWmnU2",
+      "createdAt": "2025-04-10T04:32:26.015Z"
+    },
+    {
+      "id": 6,
+      "username": "harsh",
+      "email": "harsh@gmail.com",
+      "password": "$2a$10$UgbLlEZrwP..2x13q80LJuCnOb10ranQch8SaQa6PPBgQDkBXXeXC",
+      "createdAt": "2025-04-10T05:16:00.498Z"
+    },
+    {
+      "id": 7,
+      "username": "nileash",
+      "email": "nileash@gmail.com",
+      "password": "$2a$10$VhxQRus4y.dred00J4gCvuQVHVK0BgBIFSa0ImtoUi.5sBE33470O",
+      "createdAt": "2025-04-13T10:41:42.238Z"
+    },
+    {
+      "id": 8,
+      "username": "anup",
+      "email": "anup@gmail.com",
+      "password": "$2a$10$yQEJHyrgYfWBKfoUmHogzuKoeVglr8bB3.LDnLI06k.92iTH50jO6",
+      "createdAt": "2025-04-14T04:49:38.280Z"
+    },
+    {
+      "id": 9,
+      "username": "siva",
+      "email": "siva@gmail.com",
+      "password": "$2a$10$QXtY.CIX0wS64x1hBc7r3eoFQw9aVumcLC3woyL9NDFDPYR.cNKpW",
+      "createdAt": "2025-04-14T06:19:00.481Z"
+    }
+  ]
+}

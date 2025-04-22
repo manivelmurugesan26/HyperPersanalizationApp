@@ -1,0 +1,183 @@
+/* Back Button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Continue Button */
+.continue-button {
+  margin-top: 60px;
+  padding: 15px 60px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 25px;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.continue-button:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+/* Menu Button */
+.menu-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Like Button */
+.like-button {
+  background: #6F6D6D;
+  border: none;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.like-button svg {
+  font-size: 24px;
+  color: white;
+  stroke: white;
+  stroke-width: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.like-button.liked {
+  background: #6F6D6D;
+}
+
+.like-button.liked svg {
+  fill: #ff3b30;
+  stroke: #ff3b30;
+  color: #ff3b30;
+}
+
+.like-button:hover {
+  background: #6F6D6D;
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Arrow Button */
+.arrow-btn {
+  background: #6F6D6D;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  color: black !important;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn .arrow-icon {
+  font-size: 35px;
+  color: black;
+}
+
+.arrow-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow-btn:hover .arrow-icon {
+  color: black;
+}
+
+.left-arrow {
+  left: -50px;
+}
+
+.right-arrow {
+  right: -50px;
+}
+
+/* Social Buttons */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.social-icon.google {
+  background: white;
+}
+
+.social-icon.facebook {
+  background: #1877F2;
+}
+
+.social-icon.apple {
+  background: #000;
+}
+
+.social-icon:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+} 
